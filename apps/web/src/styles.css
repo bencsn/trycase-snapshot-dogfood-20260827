@@ -13,6 +13,9 @@ button { background: #65e6b8; color: #062019; border: 0; border-radius: 999px; p
 .summary div { padding: 28px; display: flex; flex-direction: column; gap: 6px; border-right: 1px solid #27443d; }
 .summary div:last-child { border: 0; }.summary b { font-size: 30px; }.summary span, small { color: #8ca19c; }
 .services { margin-top: 32px; border: 1px solid #27443d; padding: 26px; border-radius: 20px; background: #0c1917cc; }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; }
+.section-heading h2 { margin-top: 0; }
+.section-heading span { color: #8ca19c; font-size: 14px; }
 .services article { display: grid; grid-template-columns: 12px 1fr auto; gap: 16px; align-items: center; padding: 18px 0; border-top: 1px solid #1d332e; }
 .services article div { display: flex; flex-direction: column; gap: 4px; }.dot { width: 9px; height: 9px; border-radius: 50%; background: #f8c55c; }.dot.healthy { background: #55e6b2; }
 aside { margin-top: 28px; padding: 26px; border-radius: 20px; background: #dffdf2; color: #092018; }
