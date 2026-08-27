@@ -13,10 +13,13 @@ function App() {
         <p className="eyebrow">LIVE SYSTEM STATUS</p>
         <h1>Everything important, in one calm view.</h1>
         <p>Track customer-facing services and respond before small issues become incidents.</p>
-        <button onClick={() => setShowActivity((value) => !value)}>{showActivity ? "Hide activity" : "Review activity"}</button>
+        <div className="hero-actions">
+          <button onClick={() => setShowActivity((value) => !value)}>{showActivity ? "Hide activity" : "Review activity"}</button>
+          <a href="#service-health">View service health</a>
+        </div>
       </section>
       <section className="summary"><div><b>{healthy}/{services.length}</b><span>services healthy</span></div><div><b>99.98%</b><span>30-day uptime</span></div><div><b>3m</b><span>median recovery</span></div></section>
-      <section className="services">
+      <section className="services" id="service-health">
         <h2>Service health</h2>
         {services.map((service) => <article key={service.id}><span className={`dot ${service.status}`} /><div><b>{service.name}</b><small>{service.status}</small></div><strong>{formatLatency(service.latencyMs)}</strong></article>)}
       </section>

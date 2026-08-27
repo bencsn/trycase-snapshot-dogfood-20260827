@@ -9,6 +9,8 @@ nav strong { color: white; font-size: 20px; }
 h1 { font-size: clamp(46px, 7vw, 76px); line-height: .98; margin: 18px 0; letter-spacing: -.055em; }
 .hero > p:not(.eyebrow) { color: #a8bbb6; font-size: 20px; line-height: 1.6; max-width: 650px; }
 button { background: #65e6b8; color: #062019; border: 0; border-radius: 999px; padding: 13px 20px; font-weight: 700; cursor: pointer; }
+.hero-actions { display: flex; align-items: center; gap: 18px; }
+.hero-actions a { color: #c8d8d4; font-weight: 700; text-underline-offset: 4px; }
 .summary { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid #27443d; border-radius: 20px; overflow: hidden; background: #0c1917cc; }
 .summary div { padding: 28px; display: flex; flex-direction: column; gap: 6px; border-right: 1px solid #27443d; }
 .summary div:last-child { border: 0; }.summary b { font-size: 30px; }.summary span, small { color: #8ca19c; }
