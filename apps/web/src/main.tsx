@@ -20,7 +20,7 @@ function App() {
         <h2>Service health</h2>
         {services.map((service) => <article key={service.id}><span className={`dot ${service.status}`} /><div><b>{service.name}</b><small>{service.status}</small></div><strong>{formatLatency(service.latencyMs)}</strong></article>)}
       </section>
-      {showActivity && <aside><h2>Recent activity</h2><p>Catalog latency recovered automatically.</p><p>Checkout health check completed successfully.</p></aside>}
+      {showActivity && <aside><h2>Recent activity</h2><p>Catalog latency recovered automatically.</p><p>Checkout health check completed successfully.</p><p className="owner"><span>Current owner</span><strong>Maya · Platform on-call</strong></p></aside>}
     </main>
   );
 }
