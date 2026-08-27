@@ -8,7 +8,7 @@ function App() {
   const healthy = services.filter((service) => service.status === "healthy").length;
   return (
     <main>
-      <nav><strong>Pulseboard</strong><span>Operations overview</span></nav>
+      <nav><strong>Pulseboard</strong><span>Operations overview</span><span className="availability">All systems operational</span></nav>
       <section className="hero">
         <p className="eyebrow">LIVE SYSTEM STATUS</p>
         <h1>Everything important, in one calm view.</h1>
