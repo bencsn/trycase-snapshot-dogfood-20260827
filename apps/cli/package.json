@@ -1,0 +1,13 @@
+{
+  "name": "@snapshot-dogfood/cli",
+  "version": "1.0.0",
+  "type": "module",
+  "bin": { "pulseboard": "src/index.ts" },
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "build": "tsc --noEmit",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": { "@snapshot-dogfood/shared": "workspace:*", "commander": "^14.0.0" },
+  "devDependencies": { "tsx": "^4.20.5", "typescript": "^5.9.2" }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "trycase-snapshot-dogfood",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "build": "bun run --filter '*' build",
+    "check": "bun run --filter '*' check",
+    "dev": "bun run scripts/dev.mjs",
+    "test": "bun test"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "concurrently": "^9.2.1",
+    "typescript": "^5.9.2"
+  }
+}

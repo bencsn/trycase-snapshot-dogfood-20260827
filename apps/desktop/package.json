@@ -1,0 +1,12 @@
+{
+  "name": "@snapshot-dogfood/desktop",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "src/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "build": "node --check src/main.cjs",
+    "check": "node --check src/main.cjs"
+  },
+  "devDependencies": { "electron": "^37.4.0", "typescript": "^5.9.2" }
+}
