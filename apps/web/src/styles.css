@@ -16,4 +16,6 @@ button { background: #65e6b8; color: #062019; border: 0; border-radius: 999px; p
 .services article { display: grid; grid-template-columns: 12px 1fr auto; gap: 16px; align-items: center; padding: 18px 0; border-top: 1px solid #1d332e; }
 .services article div { display: flex; flex-direction: column; gap: 4px; }.dot { width: 9px; height: 9px; border-radius: 50%; background: #f8c55c; }.dot.healthy { background: #55e6b2; }
 aside { margin-top: 28px; padding: 26px; border-radius: 20px; background: #dffdf2; color: #092018; }
+.owner { display: flex; justify-content: space-between; gap: 20px; margin: 22px 0 0; padding-top: 18px; border-top: 1px solid #aad8c7; }
+.owner span { color: #416a5d; }
 @media (max-width: 640px) { .summary { grid-template-columns: 1fr; }.summary div { border-right: 0; border-bottom: 1px solid #27443d; } nav span { display: none; } }
