@@ -20,6 +20,11 @@ function App() {
         <h2>Service health</h2>
         {services.map((service) => <article key={service.id}><span className={`dot ${service.status}`} /><div><b>{service.name}</b><small>{service.status}</small></div><strong>{formatLatency(service.latencyMs)}</strong></article>)}
       </section>
+      <section className="timeline">
+        <div><span>10:42</span><b>Notifications recovered</b><small>Automated retry cleared the delivery backlog.</small></div>
+        <div><span>10:36</span><b>Response team notified</b><small>The on-call engineer received a concise incident summary.</small></div>
+        <div><span>10:31</span><b>Elevated latency detected</b><small>Customer impact remained below the alert threshold.</small></div>
+      </section>
       {showActivity && <aside><h2>Recent activity</h2><p>Catalog latency recovered automatically.</p><p>Checkout health check completed successfully.</p></aside>}
     </main>
   );
