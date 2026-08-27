@@ -17,7 +17,10 @@ function App() {
       </section>
       <section className="summary"><div><b>{healthy}/{services.length}</b><span>services healthy</span></div><div><b>99.98%</b><span>30-day uptime</span></div><div><b>3m</b><span>median recovery</span></div></section>
       <section className="services">
-        <h2>Service health</h2>
+        <div className="section-heading">
+          <h2>Service health</h2>
+          <span>Updated just now</span>
+        </div>
         {services.map((service) => <article key={service.id}><span className={`dot ${service.status}`} /><div><b>{service.name}</b><small>{service.status}</small></div><strong>{formatLatency(service.latencyMs)}</strong></article>)}
       </section>
       {showActivity && <aside><h2>Recent activity</h2><p>Catalog latency recovered automatically.</p><p>Checkout health check completed successfully.</p></aside>}
