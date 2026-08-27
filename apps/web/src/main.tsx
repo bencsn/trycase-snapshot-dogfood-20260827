@@ -13,6 +13,7 @@ function App() {
         <p className="eyebrow">LIVE SYSTEM STATUS</p>
         <h1>Everything important, in one calm view.</h1>
         <p>Track customer-facing services and respond before small issues become incidents.</p>
+        <p className="freshness">Live checks refresh automatically every minute.</p>
         <button onClick={() => setShowActivity((value) => !value)}>{showActivity ? "Hide activity" : "Review activity"}</button>
       </section>
       <section className="summary"><div><b>{healthy}/{services.length}</b><span>services healthy</span></div><div><b>99.98%</b><span>30-day uptime</span></div><div><b>3m</b><span>median recovery</span></div></section>
