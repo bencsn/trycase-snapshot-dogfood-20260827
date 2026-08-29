@@ -5,6 +5,7 @@ import "./styles.css";
 
 function App() {
   const [showActivity, setShowActivity] = useState(false);
+  const [showMaintenance, setShowMaintenance] = useState(false);
   const healthy = services.filter((service) => service.status === "healthy").length;
   return (
     <main>
@@ -16,6 +17,17 @@ function App() {
         <button onClick={() => setShowActivity((value) => !value)}>{showActivity ? "Hide activity" : "Review activity"}</button>
       </section>
       <section className="summary"><div><b>{healthy}/{services.length}</b><span>services healthy</span></div><div><b>99.98%</b><span>30-day uptime</span></div><div><b>3m</b><span>median recovery</span></div></section>
+      <section className="maintenance">
+        <div>
+          <p className="eyebrow">PLANNED MAINTENANCE</p>
+          <h2>Catalog index refresh</h2>
+          <p>Scheduled for tonight at 23:00 UTC with no expected customer impact.</p>
+        </div>
+        <button className="secondary" onClick={() => setShowMaintenance((value) => !value)}>
+          {showMaintenance ? "Hide details" : "View details"}
+        </button>
+      </section>
+      {showMaintenance && <p className="maintenance-detail">The refresh runs against a read replica and automatically rolls back if latency rises above 250 ms.</p>}
       <section className="services">
         <h2>Service health</h2>
         {services.map((service) => <article key={service.id}><span className={`dot ${service.status}`} /><div><b>{service.name}</b><small>{service.status}</small></div><strong>{formatLatency(service.latencyMs)}</strong></article>)}
